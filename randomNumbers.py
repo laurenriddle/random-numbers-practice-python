@@ -14,9 +14,13 @@ numbers_1_to_10 = range(1, 11)
 for number in numbers_1_to_10:
     the_numbers_match = False
     # Iterate your random number list here
-    for random in my_randoms:
-        if number == random: 
+   
+    if number in my_randoms:
             # Does my_randoms contain number? Change the boolean.
             the_numbers_match = True
 
-            print(f'{number} is in the random list')
+    if the_numbers_match:
+        print(f'{number} is in the random list')
+    else: 
+        print(f'{number} is not in the random list')
+
